@@ -1,0 +1,106 @@
+{
+  "products": [
+    {
+      "id": "3",
+      "name": "Dogs",
+      "price": 70000,
+      "quantity": 0,
+      "imgUrl": "https://fastly.picsum.photos/id/237/3500/2095.jpg?hmac=y2n_cflHFKpQwLOL1SSCtVDqL8NmOnBzEW7LYKZ-z_o",
+      "catId": 1
+    },
+    {
+      "id": "5",
+      "name": "laptop",
+      "price": 7,
+      "quantity": 7,
+      "imgUrl": "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
+      "catId": 2
+    },
+    {
+      "id": "7",
+      "name": "Camera",
+      "price": 25000,
+      "quantity": 0,
+      "imgUrl": "https://fastly.picsum.photos/id/250/4928/3264.jpg?hmac=4oIwzXlpK4KU3wySTnATICCa4H6xwbSGifrxv7GafWU",
+      "catId": 3
+    },
+    {
+      "id": "9",
+      "name": "Camera",
+      "price": 20000,
+      "quantity": 15,
+      "imgUrl": "https://fastly.picsum.photos/id/250/4928/3264.jpg?hmac=4oIwzXlpK4KU3wySTnATICCa4H6xwbSGifrxv7GafWU",
+      "catId": 3
+    },
+    {
+      "id": "1",
+      "name": "Dogs",
+      "price": 50030,
+      "quantity": 10,
+      "imgUrl": "https://fastly.picsum.photos/id/237/3500/2095.jpg?hmac=y2n_cflHFKpQwLOL1SSCtVDqL8NmOnBzEW7LYKZ-z_o",
+      "catId": 1
+    },
+    {
+      "id": "8",
+      "name": "Camera",
+      "price": 23000,
+      "quantity": 3,
+      "imgUrl": "https://fastly.picsum.photos/id/250/4928/3264.jpg?hmac=4oIwzXlpK4KU3wySTnATICCa4H6xwbSGifrxv7GafWU",
+      "catId": 3
+    },
+    {
+      "id": "8",
+      "name": "Camera",
+      "price": 23000,
+      "quantity": 8,
+      "imgUrl": "https://fastly.picsum.photos/id/250/4928/3264.jpg?hmac=4oIwzXlpK4KU3wySTnATICCa4H6xwbSGifrxv7GafWU",
+      "catId": 3
+    },
+    {
+      "id": "1",
+      "name": "Dogs",
+      "price": 50030,
+      "quantity": 4000,
+      "imgUrl": "https://fastly.picsum.photos/id/237/3500/2095.jpg?hmac=y2n_cflHFKpQwLOL1SSCtVDqL8NmOnBzEW7LYKZ-z_o",
+      "catId": 1
+    },
+    {
+      "id": "4",
+      "name": "laptop",
+      "price": 40020,
+      "quantity": 5,
+      "imgUrl": "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
+      "catId": 2
+    },
+    {
+      "id": "1",
+      "name": "Dogs",
+      "price": 50030,
+      "quantity": 9,
+      "imgUrl": "https://fastly.picsum.photos/id/237/3500/2095.jpg?hmac=y2n_cflHFKpQwLOL1SSCtVDqL8NmOnBzEW7LYKZ-z_o",
+      "catId": 1
+    },
+    {
+      "id": "6",
+      "name": "laptop",
+      "price": 700,
+      "quantity": 70,
+      "imgUrl": "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
+      "catId": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Dogs"
+    },
+    {
+      "id": "2",
+      "name": "Laptops"
+    },
+    {
+      "id": "3",
+      "name": "Cameras"
+    }
+  ]
+}

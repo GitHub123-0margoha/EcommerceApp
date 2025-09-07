@@ -1,0 +1,58 @@
+<form [formGroup]="userRegisterForm" (submit)="onSubmit()">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter your name" name="name" formControlName="name">
+
+  @if (userRegisterForm.get('name')?.invalid && (userRegisterForm.get('name')?.touched || userRegisterForm.get('name')?.dirty)) {
+    <div class="text-danger">
+      <div *ngIf="userRegisterForm.get('name')?.errors?.['required']">Name is required.</div>
+      <div *ngIf="userRegisterForm.get('name')?.errors?.['pattern']">Name must be 3-10 characters long and contain only letters.</div>
+    </div>
+  }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email" name="email" formControlName="email">
+    @if (userRegisterForm.get('email')?.invalid && (userRegisterForm.get('email')?.touched || userRegisterForm.get('email')?.dirty)) {
+      <div class="text-danger">
+        <div *ngIf="userRegisterForm.get('email')?.errors?.['required']">Email is required.</div>
+        <div *ngIf="userRegisterForm.get('email')?.errors?.['email']">Email must be a valid email address.</div>
+      </div>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" formControlName="password">
+    @if (userRegisterForm.get('password')?.invalid && (userRegisterForm.get('password')?.touched || userRegisterForm.get('password')?.dirty)) {
+      <div class="text-danger">
+        <div *ngIf="userRegisterForm.get('password')?.errors?.['required']">Password is required.</div>
+        <div *ngIf="userRegisterForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.</div>
+      </div>
+    }
+  </div>
+
+  <div formGroupName="address">
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">City</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="City" name="city" formControlName="city">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Street</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Street" name="street" formControlName="street">
+    </div>
+  </div>
+
+  <div class="row" formArrayName="PhoneNums" >
+    <div class="mb-3  col-md-4 d-flex align-items-center gap-2" *ngFor="let ph of phones.controls; let i = index">
+      <div >
+        <label for="exampleInputPassword1" class="form-label">Phone Number# {{i + 1}}</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Phone Number" name="phone" [formControlName]="i">
+      </div>
+      <button class="btn btn-danger" (click)="addPhoneNumber()" [disabled]="phones.length >= 5">+</button>
+      <button class="btn btn-secondary" (click)="remove(i)" [disabled]="phones.length <= 1">-</button>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="userRegisterForm.invalid">Submit</button>
+</form>

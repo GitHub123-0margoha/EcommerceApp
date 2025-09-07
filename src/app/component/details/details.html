@@ -1,0 +1,21 @@
+<div *ngIf="product; else notFound" class="card mx-auto mt-5 mb-5" style="width: 30rem;">
+  <img [src]="product.imgUrl" class="card-img-top" alt="{{ product.name }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">Price: {{ product.price }} EGP</p>
+    <p class="card-text">Available Quantity: {{ product.quantity }}</p>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <button class="btn btn-dark" [disabled]="currentId == idsArr[0]" (click)="prev()">Previous</button>
+      <button class="btn btn-danger" [disabled]="currentId == idsArr[idsArr.length - 1]" (click)="next()">Next</button>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary w-100" (click)="goBack()">Back</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="text-center mt-5 mb-5 text-danger">
+    <h4>Product Not Found</h4>
+  </div>
+</ng-template>

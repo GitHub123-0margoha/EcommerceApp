@@ -1,0 +1,32 @@
+<div class="mb-3">
+  <select class="form-select" id="exampleSelect" [(ngModel)]="selectedCatId" (change)="filterByCategory()">
+    <option [value]="0">All Products</option>
+    <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+  </select>
+</div>
+
+<h3>Total Order Price: {{totalPrice}}</h3>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+  <ng-container *ngFor="let pro of productList">
+    <div class="col" *ngIf="pro.quantity > 0">
+      <div class="card" appRoundborder>
+        <img [src]="pro.imgUrl" class="card-img-top product-img">
+        <div class="card-body"
+            [style.backgroundColor]="pro.quantity <= 1 ? 'yellow' : 'white'"
+            appBgColor
+            hoverBgColor="lightblue">
+          <h5 class="card-title">{{ pro.name }}</h5>
+          <p class="card-text">Price: {{ pro.price }} </p>
+          <p class="card-text">Quantity: {{ pro.quantity }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-primary" (click)="buy(pro)">Buy</button>
+            <a class="btn btn-outline-primary btn-sm" [routerLink]="['/add-product', pro.id]">Edit</a>
+            <button class="btn btn-danger" [routerLink]="['/details', pro.id]">Details</button>
+          </div>
+        </div>
+        <button class="btn btn-dark" (click)="deleteProduct(pro.id!)">Delete</button>
+      </div>
+    </div>
+  </ng-container>
+</div>

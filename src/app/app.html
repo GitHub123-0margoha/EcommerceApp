@@ -1,0 +1,14 @@
+<div [dir]="dir">
+  <app-navbar></app-navbar>
+
+  <div class="container mt-3">
+    <ng-container *ngIf="loadingService.isLoading | async">
+      <div class="loader">
+        <p>Loading...</p>
+      </div>
+    </ng-container>
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer class="mt-5"></app-footer>
+</div>

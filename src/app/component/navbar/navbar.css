@@ -1,0 +1,7 @@
+/* شكل الخلفية لما اللينك يكون Active أو عليه Hover */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background-color: #dcdcdc; /* درجة رمادي أغمق شوية */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
