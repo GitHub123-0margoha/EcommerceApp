@@ -10,6 +10,7 @@ import { Details } from './component/details/details';
 import { authGuard } from './guard/auth-guard';
 import { Register } from './component/register/register';
 
+
 export const routes: Routes = [
   {path: 'home',component: Home},
   {path: 'about', component: AboutUs},
